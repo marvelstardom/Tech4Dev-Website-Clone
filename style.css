@@ -1,0 +1,167 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Avenir Next Medium", sans-serif;
+    /* font-family:Arial, Helvetica, sans-serif; */
+}
+nav {
+    display: block;
+    text-align: center;
+}
+nav ul {
+    display: inline-flex;
+    list-style-type: none;
+}
+nav ul li {
+    padding: 13px;
+}
+nav ul li a {
+    text-decoration: none;
+    color: gray;
+    font-size: 14px;
+    padding-bottom: 26px;
+}
+nav ul li a:hover {
+    border-bottom: 4px solid #ff576b;
+}
+.btn {
+    color: white;
+    padding: 10px 26px;
+    width: fit-content;
+    height: fit-content;
+    border: red;
+    border-radius: 8px;
+    background: #ff576b;
+}
+.social-links {
+    display: inline-flex;
+    list-style-type: none;
+}
+.hero-banner {
+    background-color: rgb(8, 58, 85);
+    color: white; 
+    padding: 1px;
+    text-align: center;
+    margin: 0;
+}
+.hero-banner p {
+    padding-bottom: 0 !important;
+}
+.hero {
+    background-image: url(images/index-2b.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    justify-content: center;
+    background-size: cover;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 630px;
+    margin-top: 0px;
+    
+}
+.hero-text h1 {
+    font-size: xxx-large;
+    color: white;
+}
+.hero-text p {
+    color: white;
+}
+.bio {
+    padding-top: 10%;
+    padding-bottom: 80px;
+    padding-right: 10%;
+    display: inline-flex;
+}
+.bio img {
+    width: 100%;
+    height: 100%;
+}
+.info {
+    padding-left: 8%;
+}
+.info h3 {
+    font-size: 23px;
+}
+.info p {
+    font-size: 18px;
+}
+section {
+    padding: 40px 80px;
+    text-align: center;
+}
+section h1 {
+    font-size: xxx-large;
+    color: #083a55;
+}
+.diff p {
+    font-size: x-large;
+    font-weight: 800;
+    padding-bottom: 0 !important;
+}
+.diff ul {
+    display: flex;
+}
+.diff ul li {
+    padding: 40px;
+    list-style-type: none;
+}
+.programs ul {
+    display: inline-flex;
+}
+.programs ul li {
+    text-align: left !important;
+    list-style-type: none;
+    padding: 10px 20px 35px 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    margin-right: 20px;
+    width: 30%;
+}
+.programs li h3, p, a {
+    padding-bottom: 15px;
+    line-height: 20px;
+}
+.programs li a {
+    font-size: 14px;
+    text-decoration: none;
+}
+.msg {
+    background-color: #083a55;
+    color: white;
+}
+
+
+footer {
+    background-color: #083a55;
+    color: white;
+    padding: 50px;
+}
+footer ul li {
+    list-style-type: none;
+    padding-bottom: 15px;
+    font-size: 13px;
+}
+.footer-top {
+    display: grid;
+    grid-auto-flow: column;
+}
+.footer-bottom {
+    display: grid;
+    grid-auto-flow: column;
+    padding-inline-start: 40px;
+    padding-inline-end: 40px;
+    margin-top: 2%;
+    font-size: 13px;
+}
+/* .foo-btn {
+    color: white;
+    padding: 10px 26px;
+    width: fit-content;
+    border: red;
+    border-radius: 8px;
+    background: #ff576b;
+} */
+
+/* red color code: rgb(255, 87, 107 */
