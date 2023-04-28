@@ -6,22 +6,30 @@ body {
 }
 nav {
     display: block;
-    text-align: center;
+}
+.navbar {
+    padding: 0 40px;
+}
+.nav-img {
+    margin-top: 18px;
+    cursor: pointer;
 }
 nav ul {
     display: inline-flex;
     list-style-type: none;
+    text-align: center;
+    margin-left: 9%;
 }
-nav ul li {
+.navlink li {
     padding: 13px;
 }
-nav ul li a {
+.navlink li a {
     text-decoration: none;
     color: gray;
     font-size: 14px;
-    padding-bottom: 26px;
+    padding-bottom: 28px;
 }
-nav ul li a:hover {
+.navlink li a:hover {
     border-bottom: 4px solid #ff576b;
 }
 .btn {
@@ -32,10 +40,26 @@ nav ul li a:hover {
     border: red;
     border-radius: 8px;
     background: #ff576b;
+    cursor: pointer;
 }
-.social-links {
-    display: inline-flex;
+.social {
+    display: inline-block;
+    float: right;
+    margin: 10px 20px;
+}
+.social-links li {
+    /* display: initial; */
     list-style-type: none;
+    /* float:inline-start; */
+    /* padding: 0px 0 0 0 !important;
+    padding-bottom: 0 !important; */
+}
+.social-links li a {
+    /* padding-bottom: 0 !important; */
+}
+.social-links li a img {
+    padding: 0 8px;
+    /* padding-bottom: 0 !important; */
 }
 .hero-banner {
     background-color: rgb(8, 58, 85);
@@ -48,18 +72,16 @@ nav ul li a:hover {
     padding-bottom: 0 !important;
 }
 .hero {
-    background-image: url(images/index-2b.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    justify-content: center;
-    background-size: cover;
-    text-align: center;
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 630px;
-    margin-top: 0px;
-    
+    opacity: 1;
+}
+.hero-text {
+    bottom: 15%;
+    position: absolute;
+    text-align: center;
+    margin: 0 11%;
 }
 .hero-text h1 {
     font-size: xxx-large;
@@ -67,19 +89,77 @@ nav ul li a:hover {
 }
 .hero-text p {
     color: white;
+    font-size: 22px;
+    line-height: normal;
 }
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 60%;
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-size: 50px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 30px;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev {
+    left: 30px;
+    border-radius: 3px 0 0 3px;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
 .bio {
-    padding-top: 10%;
-    padding-bottom: 80px;
-    padding-right: 10%;
+    padding-top: 9%;
+    padding-bottom: 60px;
     display: inline-flex;
 }
 .bio img {
     width: 100%;
     height: 100%;
+    border-right: 10px solid #083a55;
+    border-bottom: 10px solid #083a55;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
 }
 .info {
     padding-left: 8%;
+    margin-top: 7%;
+    flex-basis: 30%;
 }
 .info h3 {
     font-size: 23px;
@@ -95,6 +175,38 @@ section h1 {
     font-size: xxx-large;
     color: #083a55;
 }
+.diff-icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.diff-icon {
+    width: 92px;
+    height: 92px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    /* margin-bottom: 15px; */
+}
+.diff-icon.purple {
+    background-color: #800080;
+}
+.diff-icon.navy {
+    background-color: #083a55;
+}
+.diff-icon.yellow {
+    background-color: #B76800;
+}
+.diff-icon.green {
+    background-color: #417505;
+}
+.diff-icon.blue {
+    background-color: #003183;
+}
+.diff-icon img {
+    height: 26px;
+}
 .diff p {
     font-size: x-large;
     font-weight: 800;
@@ -104,8 +216,20 @@ section h1 {
     display: flex;
 }
 .diff ul li {
-    padding: 40px;
+    padding: 30px;
+    width: 30%;
     list-style-type: none;
+}
+.fact {
+    background-image: url(/images/index-5.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    color: white;
+    font-size: 20px;
+    padding: 8% 12%;
+}
+.fact p {
+    line-height: 40px;
 }
 .programs ul {
     display: inline-flex;
@@ -113,24 +237,91 @@ section h1 {
 .programs ul li {
     text-align: left !important;
     list-style-type: none;
-    padding: 10px 20px 35px 20px;
     border: 1px solid #e0e0e0;
     border-radius: 8px;
     margin-right: 20px;
     width: 30%;
+    line-height: 25px;
 }
-.programs li h3, p, a {
-    padding-bottom: 15px;
-    line-height: 20px;
+.programs img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}
+.programs-text {
+    padding: 10px 30px 30px 30px;
+}
+.programs h3 {
+    font-size: 16px;
+}
+.programs p {
+    font-size: 14px;
 }
 .programs li a {
     font-size: 14px;
     text-decoration: none;
+    margin-top: 20px;
 }
 .msg {
     background-color: #083a55;
     color: white;
 }
+.video {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 3%;
+}
+.iframe {
+    position: relative;
+}
+.video-grid-lg {
+    flex-basis: 60%;
+    height: 500px;
+}
+.video-grid-sm {
+    flex-basis: 36%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 300px;
+}
+.video-grid-sm .iframe {
+    height: 46%;
+}
+.video1 {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    cursor: pointer;
+    transition: 300ms;
+}
+.video1 img {
+    width: 100%;
+    /* height: 100%; */
+    object-fit: cover;
+}
+.video1 .iframe-overlay {
+    opacity: 6;
+    position: absolute;
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    /* padding: 30%; */
+}
+.overlay-text {
+position: absolute;
+    /* color: white;
+    font-size: 20px;
+    text-transform: uppercase; */
+}
+
+
+
 
 
 footer {
