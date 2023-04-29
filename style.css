@@ -48,18 +48,10 @@ nav ul {
     margin: 10px 20px;
 }
 .social-links li {
-    /* display: initial; */
     list-style-type: none;
-    /* float:inline-start; */
-    /* padding: 0px 0 0 0 !important;
-    padding-bottom: 0 !important; */
-}
-.social-links li a {
-    /* padding-bottom: 0 !important; */
 }
 .social-links li a img {
     padding: 0 8px;
-    /* padding-bottom: 0 !important; */
 }
 .hero-banner {
     background-color: rgb(8, 58, 85);
@@ -75,7 +67,11 @@ nav ul {
     display: flex;
     flex-direction: column;
     width: 100%;
-    opacity: 1;
+    height: calc(100% - 76px);
+}
+
+.slideshow-container img {
+    background-color: rgba(0, 0, 0, 0.445);
 }
 .hero-text {
     bottom: 15%;
@@ -187,7 +183,6 @@ section h1 {
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    /* margin-bottom: 15px; */
 }
 .diff-icon.purple {
     background-color: #800080;
@@ -249,8 +244,27 @@ section h1 {
     object-fit: cover;
     border-radius: 8px 8px 0 0;
 }
+.programs-item {
+    height: 250px !important;
+}
 .programs-text {
     padding: 10px 30px 30px 30px;
+}
+.programs-text.purple:hover {
+    background: #800080;
+    color: white !important;
+    border-radius: 0 0 8px 8px;
+}
+
+.programs-text.orange:hover {
+    background: #B76800;
+    color: white;
+    border-radius: 0 0 8px 8px;
+}
+.programs-text.navy:hover {
+    background: #083a55;
+    color: white;
+    border-radius: 0 0 8px 8px;
 }
 .programs h3 {
     font-size: 16px;
@@ -262,6 +276,7 @@ section h1 {
     font-size: 14px;
     text-decoration: none;
     margin-top: 20px;
+    color: wheat;
 }
 .msg {
     background-color: #083a55;
@@ -271,7 +286,7 @@ section h1 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 0 3%;
+    padding: 120px 80px 40px 80px;
 }
 .iframe {
     position: relative;
@@ -284,42 +299,92 @@ section h1 {
     flex-basis: 36%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     min-width: 300px;
 }
 .video-grid-sm .iframe {
     height: 46%;
 }
 .video1 {
-    position: absolute;
-    top: 0;
+    display: flex;
+    flex-direction: column;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    z-index: 1;
     cursor: pointer;
-    transition: 300ms;
 }
-.video1 img {
+.video1 .video-bg {
     width: 100%;
-    /* height: 100%; */
     object-fit: cover;
 }
-.video1 .iframe-overlay {
-    opacity: 6;
+.video-btn {
+    display: inline-flex;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: white;
     position: absolute;
-    color: white;
-    font-size: 20px;
+    top: calc(50% - 50px);
+    left: calc(50% - 50px);
+    align-items: center;
+    justify-content: center;
+}
+.video1 .iframe-overlay {
+    font-size: 16px;
     text-transform: uppercase;
-    /* padding: 30%; */
+}
+.iframe-overlay {
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    position: absolute;
+    transition: 300ms;
+    padding: 20px;
+    box-sizing: border-box;
 }
 .overlay-text {
-position: absolute;
-    /* color: white;
+    position: absolute;
+    top: 10px;
+    color: white;
     font-size: 20px;
-    text-transform: uppercase; */
+    font-weight: 600;
+    text-align: left;
 }
-
+.testimonials {
+    padding: 80px;
+} 
+.testimonials h1 {
+    padding-bottom: 3%;
+}
+.testimonial ul {
+    display: inline-flex;
+}
+.testimonial ul li {
+    list-style-type: none;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    margin-right: 40px;
+    width: 30%;
+    font-size: 14px;
+    line-height: 25px;
+    text-align: center;
+}
+.testimonial ul li:hover {              
+    box-shadow: 7px 7px 40px 0 rgba(0, 0, 0, 0.1);
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+.testimonial ul li a {
+    text-decoration: none;
+}
+.test-item img {
+    height: 90px;
+    width: 90px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-top: -12%;
+}
 
 
 
@@ -346,13 +411,14 @@ footer ul li {
     margin-top: 2%;
     font-size: 13px;
 }
-/* .foo-btn {
-    color: white;
-    padding: 10px 26px;
-    width: fit-content;
-    border: red;
-    border-radius: 8px;
-    background: #ff576b;
-} */
-
-/* red color code: rgb(255, 87, 107 */
+.download {
+    display: inline-flex;
+    justify-content: center;
+}
+.footer-social-links {
+    display: inline-flex;
+    float: right;
+}
+.footer-social-links li {
+    padding: 0px 10px;
+}
